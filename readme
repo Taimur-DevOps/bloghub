@@ -1,0 +1,51 @@
+/blogging-website
+├── /components
+│   ├── /auth
+│   │   ├── LoginForm.js            # Login form component
+│   │   ├── SignupForm.js           # Signup form component (optional)
+│   ├── /dashboard
+│   │   ├── DashboardSidebar.js     # Sidebar for dashboard navigation
+│   │   ├── DashboardLayout.js      # Layout component that wraps dashboard pages
+│   │   ├── BlogList.js             # Display all blog posts in the dashboard
+│   │   ├── BlogCard.js             # A single blog post card (used in blog list)
+│   │   ├── CreateBlogForm.js       # Form to create a new blog post
+│   │   ├── EditBlogForm.js         # Form to edit an existing blog post
+│   │   ├── UserList.js             # List of users in the dashboard
+│   │   ├── UserCard.js             # A single user card (used in user list)
+│   ├── /ui
+│   │   ├── Button.js               # Reusable button component (optional)
+│   │   ├── Input.js                # Reusable input component (optional)
+├── /lib
+│   ├── dbConnect.js                # MongoDB connection handler
+│   ├── jwt.js                      # JWT token handling (authentication)
+├── /models
+│   ├── Blog.js                     # Mongoose model for blog posts
+│   ├── User.js                     # Mongoose model for users
+├── /pages
+│   ├── /api
+│   │   ├── /blogs
+│   │   │   ├── index.js            # API for getting/creating all blog posts
+│   │   │   ├── [id].js             # API for CRUD operations on a specific blog post (GET, PUT, DELETE)
+│   │   ├── /auth
+│   │   │   ├── login.js            # API for user login and JWT token generation
+│   │   │   ├── signup.js           # API for user signup (optional)
+│   ├── /dashboard
+│   │   ├── index.js                # Dashboard page that lists all blog posts
+│   │   ├── create.js               # Page for creating a new blog post
+│   │   ├── edit/[id].js            # Page for editing a specific blog post
+│   │   ├── users.js                # Page for managing users (optional)
+│   │   ├── login.js                # Login page (renders LoginForm)
+│   ├── index.js                    # Homepage that displays blog posts (public-facing)
+│   ├── blog/[id].js                # A single blog post page (public-facing)
+├── /public
+│   ├── /images                     # Folder for storing images (used for blog posts, user avatars, etc.)
+├── /styles
+│   ├── globals.css                 # Global CSS file for the project (tailwind imports, custom styles)
+│   ├── tailwind.config.js          # Tailwind CSS configuration
+├── /utils
+│   ├── auth.js                     # Utility functions for handling authentication (e.g., checking user session)
+├── .env.local                      # Environment variables for API keys, JWT secret, etc.
+├── .gitignore                      # Git ignore file
+├── next.config.js                  # Next.js configuration file
+├── package.json                    # Project dependencies and scripts
+└── README.md                       # Project documentation
