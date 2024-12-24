@@ -13,8 +13,8 @@ export default function CategoryPage({ params }) {
 
   if (!category) {
     return <div>Category not found</div>;
+  
   }
-
   return (
     <div className="category-content space-y-8">
       <div className="flex items-center gap-3">

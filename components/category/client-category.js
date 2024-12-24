@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import { BlogGrid } from '@/components/blog/blog-grid';
 import { Button } from '@/components/ui/button';
@@ -14,7 +13,6 @@ export function ClientCategory({ blogs }) {
     blog.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     blog.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
   // Load more blogs (in increments of 15)
   const loadMore = () => {
     setVisibleBlogs(prev => Math.min(prev + 15, filteredBlogs.length));
